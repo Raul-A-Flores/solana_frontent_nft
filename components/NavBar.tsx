@@ -7,7 +7,7 @@ const NavBar: FC = () => {
   return (
     <HStack width="full" padding={4}>
       <Spacer />
-       <WalletMultiButton className={styles["wallet-adapter-button-trigger"]} />
+      <WalletMultiButton className={styles["wallet-adapter-button-trigger"]} />
     </HStack>
   )
 }

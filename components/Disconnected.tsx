@@ -1,4 +1,6 @@
 import { FC, MouseEventHandler, useCallback } from "react"
+import { useWalletModal } from "@solana/wallet-adapter-react-ui"
+import { useWallet } from "@solana/wallet-adapter-react"
 import {
   Button,
   Container,
@@ -7,9 +9,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react"
-import { ArrowForwardIcon } from "@chakra-ui/icons";
-import { useWalletModal } from "@solana/wallet-adapter-react-ui"
-import { useWallet } from "@solana/wallet-adapter-react";
+import { ArrowForwardIcon } from "@chakra-ui/icons"
 
 const Disconnected: FC = () => {
 

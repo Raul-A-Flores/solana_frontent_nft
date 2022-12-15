@@ -1,9 +1,8 @@
 import type { AppProps } from "next/app"
-import * as React from 'react'
-
 import { ChakraProvider } from "@chakra-ui/react"
 
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react"
+
 import WalletContextProvider from '../components/WalletContextProvider'
 
 
@@ -17,12 +16,13 @@ const theme = extendTheme({ colors })
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-
-    <ChakraProvider theme={theme}>
-        <Component {...pageProps} />
-    </ChakraProvider>
-)
-  
+    
+  <ChakraProvider theme={theme}>
+    <WalletContextProvider>
+      <Component {...pageProps} />
+    </WalletContextProvider>
+  </ChakraProvider>
+  )
 }
 
 export default MyApp
